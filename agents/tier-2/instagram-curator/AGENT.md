@@ -103,22 +103,28 @@ Build an Instagram presence that tells a cohesive visual story, drives engagemen
    - Tips & tricks (quick education)
    - Trending audio participation
    - Humor/personality
-3. Create Reels strategy:
-   - 3 Reels per week minimum
+3. Create Reels strategy (2026 update):
+   - **3–5 Reels per week** (algorithm favors consistently active accounts)
+   - **Optimal Reel length**: 7–15 seconds for loops/repeat views; 15–30 seconds for tutorials/tips; avoid padding length just to seem longer
    - Mix of evergreen + trending
-   - Target 3-5% engagement (Reels benchmark)
-4. Optimize for algorithm:
-   - First 3 seconds: Hook/attention
-   - Keep through end (retention = algorithm bonus)
-   - Use trending audio within 1 week (recency boost)
+   - Pair Reels with **2–3 carousels per week** — carousels drive saves and engagement, Reels drive reach and discovery
+   - Target primary metric: **Views + completion rate** (not just engagement rate)
+4. Optimize for algorithm (2026 update):
+   - **First 2 seconds: Hook/attention** — up to 50% of viewers drop off in the first 3 seconds
+   - **Watch time is the #1 signal** — completion rate matters more than total views; a 45s video watched to 70% completion beats a 15s video with 40% completion
+   - **Views is now the primary metric** across all formats (Reels, Stories, Photos, Carousels) — Instagram unified measurement in 2026
+   - Key engagement signals ranked: Watch Time > Saves > Shares > DM Sends > Comments > Likes (likes are now the weakest signal)
+   - Use trending audio with **under 5,000 uses** to catch trends before saturation (vs chasing already-peaked sounds)
    - Captions on video (accessibility + watch time)
+   - **Originality Score**: Instagram's 2026 algorithm detects recycled clips — never repost TikTok videos with watermarks or reuse content verbatim; always add your unique spin
+   - Repeat views count as strong positive signals — design content people want to re-watch
 5. Call-to-action strategy:
    - "Save this for later"
    - "Share with someone who needs this"
    - "Link in bio for more"
 6. Output: Weekly Reels calendar + creative briefs
 
-**Success Metric**: 3-5% engagement rate on Reels, 20%+ save rate
+**Success Metric**: Strong watch time/completion rate, 20%+ save rate, meaningful share/DM count (views now primary metric, not engagement rate %)
 
 ---
 
@@ -161,16 +167,26 @@ Build an Instagram presence that tells a cohesive visual story, drives engagemen
    - Engagement rate trending?
    - Audience demographics (age, location, interests)
    - Top followers/most engaged
-2. Growth levers:
-   - Organic: Better content, hashtags, consistency
-   - Paid: Paid promotion of best posts
-   - Community: Cross-promotion with related accounts
-   - Reels: Algorithm favors video, drives discovery
-3. Hashtag strategy:
-   - 20-30 hashtags per post
-   - Mix: 5 broad (1M+ reach), 10 medium (100K-1M), 15 niche (<100K)
-   - Rotate hashtags (avoid looking spammy)
-   - Track which hashtags drive engagement
+2. Growth levers (2026):
+   - Organic: High-quality original content, Instagram SEO, keyword-rich captions, consistency
+   - Paid: Promote best-performing organic posts
+   - Community: Cross-promotion with related accounts in niche
+   - Reels: Still the #1 format for reach and discovery — prioritize
+   - Carousels: Best for engagement depth and saves
+   - Instagram SEO: Keyword-rich captions generate ~30% more reach and 2x likes vs hashtag-heavy posts
+     - Use keywords naturally in captions (not keyword-stuffed)
+     - Add alt text to images (Instagram's AI reads it)
+     - Use on-screen text in Reels (algorithm indexes it)
+     - Maintain a consistent niche/topic — algorithm penalizes accounts without clear content pillars
+3. Hashtag strategy (2026 update):
+   - **3–5 highly relevant hashtags per post** (Instagram now recommends this; 20-30 is outdated and hurts reach)
+   - Max 8 hashtags if you need more coverage — beyond that, the algorithm gets confused and may reduce reach
+   - Note: Instagram removed the ability to follow hashtags in December 2024 — hashtags are now **categorization tools, not distribution hacks**
+   - Focus on **niche, branded, and location-specific** hashtags (e.g., #AustinTattooArtist not #tattoo)
+   - Avoid generic/oversaturated tags — they confuse the algorithm and signal low-quality content
+   - Hashtags in captions increase reach by ~36% vs first comment; test both for your account
+   - Instagram CEO confirmed: "Hashtags don't boost reach anymore — they categorize content for the algorithm"
+   - Pair hashtags with **keyword-rich captions** — Instagram's AI now reads captions, on-screen text in Reels, and alt text for search indexing
 4. Follower acquisition plan:
    - Organic: 10-15% monthly growth (sustainable)
    - With paid: 20-30% monthly growth (with budget)
@@ -204,9 +220,10 @@ Build an Instagram presence that tells a cohesive visual story, drives engagemen
    - Which content resonates most?
    - Demographics: age, location, interests
 4. Recommendations for next month:
-   - Content adjustments (double down on what works)
-   - Growth initiatives (more Reels? Paid boost?)
-   - Creative refresh (if engagement stalling)
+   - Content adjustments (double down on what works by watch time + saves)
+   - Growth initiatives (more Reels? More carousels? Paid boost?)
+   - Creative refresh (if views/completion rate stalling)
+   - **Review metrics weekly, not just monthly** — the 2026 algorithm rewards fast adjustments
 5. ROI tracking:
    - Link Instagram engagement → website clicks → conversions
    - Calculate contribution to revenue
@@ -250,14 +267,16 @@ Build an Instagram presence that tells a cohesive visual story, drives engagemen
 
 ---
 
-## Success Metrics
+## Success Metrics (2026)
 
-- **Growth**: 10-15% monthly follower growth (organic)
-- **Engagement**: 3-5% engagement rate (likes + comments / total reach)
-- **Reach**: 30%+ of followers per post
-- **Community**: 50%+ reply rate on questions
-- **Reels**: 3-5% engagement, 20%+ save rate
-- **Conversion**: Measurable link clicks to website/booking
+- **Primary metric**: Views + watch time/completion rate (Instagram's unified primary metric as of 2026)
+- **Growth**: Consistent follower growth with high engagement quality over quantity
+- **Saves**: 20%+ save rate on educational/valuable Reels
+- **Shares**: High share-to-DM rate signals algorithm-worthy content
+- **Community**: 50%+ reply rate on questions, 2h DM response time
+- **Reels**: Strong completion rate (aim for 60%+), repeat views, saves, shares
+- **Conversion**: Measurable profile visits → link clicks → bookings/website
+- **Review cadence**: Weekly metrics check (not monthly) — fast adjustment is rewarded
 
 ---
 
@@ -297,7 +316,7 @@ spawn_agent(
 ## Fallback Logic
 
 - If content not ready: Use evergreen content library
-- If engagement low: Audit hashtags, test new content types
+- If reach low: Audit captions for keywords/SEO, refine hashtag relevance (3–5 niche tags), test new content types
 - If growth stalling: Increase Reels frequency, boost with paid
 - If community unhappy: Respond quickly, escalate serious issues
 
