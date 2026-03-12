@@ -71,59 +71,90 @@ spawn_agent(
 
 ---
 
-### Workflow 2: DistroKid Submission
+### Workflow 2: Release Package Preparation (Manual Upload)
 **Input**: Downloaded Suno track + metadata + release preferences
 **Process**:
-1. Prepare release info:
+1. Prepare release package:
    - Track title (from Suno + any edits)
-   - Artist name (your artist profile)
+   - Artist name (MickeySchlick)
    - Album/EP name (if batching)
    - Genre (from Suno or user override)
-   - Release date (immediate or scheduled)
-2. Add release metadata:
-   - ISRC code (auto-generated)
-   - Copyright owner (you)
-   - Royalty split (100% to you)
+   - Release date preference (immediate or scheduled)
+2. Organize upload materials:
+   - MP3 file (ready to upload)
    - Cover art (if available)
-3. Submit to DistroKid via API:
-   - Create release
-   - Upload MP3
-   - Add metadata
-   - Submit for distribution
-4. Confirm submission:
-   - Release ID
-   - Estimated delivery (24-48 hours)
-   - Status tracking URL
-5. Log submission:
-   - Track status in database
-   - Notify when live on platforms
-6. Output: Release submitted, status tracking initiated
+   - Release metadata (markdown file)
+3. Create upload checklist:
+   ```
+   Track: [Name]
+   Artist: MickeySchlick
+   Genre: [Genre]
+   Ready to upload to DistroKid: YES
+   
+   Link: https://distrokid.com/uploads
+   ```
+4. Generate human-readable upload guide:
+   - Step-by-step instructions
+   - Pre-filled values ready to copy-paste
+   - Link to MP3 download
+5. Store metadata in Git:
+   - `/music/suno/metadata/[track-name].json`
+   - Track status: "awaiting_upload"
+6. Notify you:
+   - "New track ready: [Name]"
+   - "Action needed: Upload to DistroKid"
+   - Link to upload checklist
+7. Output: Upload-ready package + instructions
 
-**Success Metric**: All new tracks submitted within 24 hours, zero submission errors
+**Manual Upload Step** (you do this):
+1. Go to https://distrokid.com/uploads
+2. Create new release
+3. Fill in details from agent's checklist
+4. Upload MP3
+5. Submit
+6. Note release ID (e.g., "DK-12345")
+
+**Then notify agent**: Send release ID for tracking
+
+**Success Metric**: Tracks ready within 2 hours, you upload in <5 minutes per track
+
+**Future**: When DistroKid releases official API, this becomes fully automated
 
 ---
 
-### Workflow 3: Distribution Status Tracking
-**Input**: DistroKid release ID + API key
+### Workflow 3: Distribution Status Tracking (Manual + Fallback API)
+**Input**: DistroKid release ID (you provide after upload) + release metadata
 **Process**:
-1. Daily polling of DistroKid API:
-   - Check each pending release status
-   - When does it go live on each platform?
-2. Track by platform:
+
+**Current (Manual Tracking - Option A):**
+1. You provide release ID after uploading to DistroKid
+   - Format: "DK-12345" (from DistroKid confirmation)
+2. Agent logs release ID:
+   - Stores in metadata: `/music/suno/metadata/[track-name].json`
+   - Status: "uploaded_to_distrokid"
+3. Manual status checks (you tell agent):
+   - "Track XYZ is now live on TikTok"
+   - Agent updates status: "live_on_tiktok"
+4. Track by platform (manual reporting):
    - Spotify (usually 1-2 days)
    - Apple Music (1-3 days)
    - TikTok (1-2 days)
    - Instagram (1-2 days)
-   - YouTube Music, Amazon, others
-3. Update status:
-   - When live: "Track now available on TikTok"
-   - Provide direct links to sound library
-4. Trigger social promotion:
-   - When track live on TikTok → notify Social Media Strategist
-   - "Your track 'Song Name' is now available in TikTok sound library"
-5. Output: Real-time status updates + promotion triggers
+5. Trigger social promotion:
+   - When you confirm TikTok live → notify Social Media Strategist
+   - Agent coordinates promotion campaign
+6. Output: Status tracking + promotion coordination
 
-**Success Metric**: Real-time tracking, social promotion coordinated on day of release
+**Future (Option C - When DistroKid API Available):**
+- Agent will automatically poll DistroKid API
+- Real-time platform tracking
+- Auto-detect when live
+- Zero-touch promotion triggering
+- Switch to full automation
+
+**Success Metric**: 
+- Current: You upload + tell agent status, agent coordinates everything else
+- Future: Fully automated when official API available
 
 ---
 
@@ -153,30 +184,47 @@ spawn_agent(
 
 ---
 
-### Workflow 5: Analytics & Monetization Tracking
-**Input**: DistroKid API + Suno release history
+### Workflow 5: Analytics & Monetization Tracking (Manual + Fallback API)
+**Input**: DistroKid analytics (you access dashboard + share data) + Suno release history
 **Process**:
-1. Monthly analytics pull:
+
+**Current (Manual Analytics - Option A):**
+1. You check DistroKid dashboard monthly:
+   - Pull screenshots or export data
+   - Share stats with agent
+2. Agent receives data:
    - Streams per platform
-   - Countries/regions (where's it popular?)
-   - Revenue by platform (Spotify pays different rates than YouTube)
-   - Monthly royalties earned
-2. Track performance trends:
+   - Countries/regions
+   - Revenue by platform
+   - Monthly royalties
+3. Agent analyzes & organizes:
+   - Stores in Git: `/music/suno/analytics/[year-month].json`
+   - Trends analysis
+   - Recommendations
+4. Track performance trends:
    - Which tracks getting most plays?
    - Which platforms driving most revenue?
    - Geographic hotspots (focus promotion there?)
-3. Analyze & recommend:
+5. Analyze & recommend:
    - "Your track got 5K streams from UK, target UK audience more"
    - "TikTok driving 40% of streams but 10% of revenue, Instagram better ROI"
    - "This genre is trending, create more like it"
-4. Report to dashboard:
+6. Report to dashboard:
    - Monthly music earnings
    - Platform breakdown
    - Top performing tracks
    - Growth trends
-5. Output: Monthly analytics + recommendations
+7. Output: Monthly analytics + recommendations
 
-**Success Metric**: Complete transparency on earnings + actionable insights
+**Future (Option C - When DistroKid API Available):**
+- Agent automatically polls analytics daily
+- Auto-generates insights
+- Tracks growth in real-time
+- Switch to zero-touch monitoring
+
+**Success Metric**: 
+- Current: Monthly manual data pull + agent analysis
+- Future: Real-time automated tracking when API available
 
 ---
 
